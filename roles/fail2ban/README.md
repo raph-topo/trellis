@@ -24,10 +24,13 @@ fail2ban_socket: /var/run/fail2ban/fail2ban.sock
 fail2ban_ignoreip: 127.0.0.1/8
 
 # How long in seconds should the ban last for?
-fail2ban_bantime: 600
+fail2ban_bantime: 10m
 
 # How many times can they try before getting banned?
 fail2ban_maxretry: 6
+
+# Over which period should Fail2ban count the tries?
+fail2ban_findtime: 5m
 
 # How should the file changes be detected?
 # gamin, polling, auto
